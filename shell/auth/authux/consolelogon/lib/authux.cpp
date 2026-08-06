@@ -553,7 +553,11 @@ HRESULT AuthUX::Hide()
 
 HRESULT AuthUX::Stop()
 {
+#ifdef SKIP_AUTHUX_LOGGING
+	HANDLE logFile = INVALID_HANDLE_VALUE;
+#else
 	HANDLE logFile = CreateFileW(L"C:\\log.txt",GENERIC_READ | GENERIC_WRITE|FILE_APPEND_DATA ,0,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
+#endif
 
 	auto fileCloser = wil::scope_exit([&]() -> void {if (logFile != INVALID_HANDLE_VALUE) CloseHandle(logFile);});
 
