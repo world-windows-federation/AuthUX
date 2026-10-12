@@ -314,6 +314,17 @@ void CLogonFrame::SetBackgroundGraphics()
 	graphic->Release();
 }
 
+void CLogonFrame::RemoveBackgroundGraphics()
+{
+	DWORD deferCookie;
+	StartDefer(&deferCookie);
+
+	auto InsideFrameElement = FindDescendent(DirectUI::StrToID(L"InsideFrame"));
+	InsideFrameElement->RemoveLocalValue(DirectUI::Element::BackgroundProp);
+
+	EndDefer(deferCookie);
+}
+
 struct SecurityOptionsFlags
 {
 	LC::LogonUISecurityOptions flag;

@@ -31,6 +31,7 @@ public:
 	void SetOptions(MessageOptionFlag optionsFlag);
 
 	void SetBackgroundGraphics();
+	void RemoveBackgroundGraphics();
 	void ShowSecurityOptions(LC::LogonUISecurityOptions SecurityOptsFlag, WI::AsyncDeferral<WI::CMarshaledInterfaceResult<LC::ILogonUISecurityOptionsResult>> completion);
 	HRESULT OnSecurityOptionSelected(LC::LogonUISecurityOptions SecurityOpt);
 	HRESULT ConfirmEmergencyShutdown();

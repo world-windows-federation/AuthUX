@@ -19,5 +19,7 @@ public:
 
 	HRESULT OnMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT* plRet) override;
 
+	void FrameResize(class CLogonFrame* logonFrame, int X, int Y, int width, int height);
+
 	LCPD::CredProvScenario m_scenario;
 };
