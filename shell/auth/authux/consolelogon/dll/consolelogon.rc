@@ -468,6 +468,50 @@ IDB_SHUTDOWNDROPDOWNBUTTONACTIVE	    BITMAP				  "resources/12301.bmp"
 IDB_PLAPICON 							BITMAP 				  "resources/12232.bmp"
 IDB_DEFAULTPFP							BITMAP				  "resources/usertile1.bmp"
 
+IDD_BSDR_DLG DIALOGEX 0, 0, 266, 224
+STYLE DS_SETFONT | WS_CHILD
+CAPTION ""
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+FONT 10, "Segoe UI"
+BEGIN
+	CONTROL "The following programs need to close:", IDC_BSDR_TITLE, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 20, 266, 14
+	CONTROL "", IDC_BSDR_SEPARATOR_TOP, STATIC, SS_OWNERDRAW | WS_CHILD | WS_VISIBLE, 0, 46, 266, 1
+	CONTROL "", IDC_BSDR_APPLIST, STATIC, SS_USERITEM | WS_CHILD | WS_VISIBLE, 0, 52, 256, 85
+	CONTROL "", IDC_BSDR_SCROLLBAR, SCROLLBAR, SBS_VERT | WS_CHILD | WS_VISIBLE, 256, 52, 10, 85
+	CONTROL "", IDC_BSDR_SEPARATOR_BOTTOM, STATIC, SS_OWNERDRAW | WS_CHILD | WS_VISIBLE, 0, 143, 266, 1
+	CONTROL "To close the program that is preventing Windows from\nshutting down, click Cancel, and then close the program.", IDC_BSDR_DESC, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 152, 266, 30
+	CONTROL "&Cancel", IDCANCEL, BUTTON, BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 193, 191, 70, 13
+	CONTROL "&Force shut down", IDC_BSDR_FORCE_BTN, BUTTON, BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 115, 191, 70, 13
+	CONTROL "If you force shut down you may lose work that you haven't saved.\nDo you still want to force shutdown?", IDC_BSDR_WARNING, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 152, 266, 30
+	CONTROL "&No", IDNO, BUTTON, BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 193, 191, 70, 13
+	CONTROL "&Yes", IDYES, BUTTON, BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 115, 191, 70, 13
+END
+
+IDB_BSDR_SEPARATOR BITMAP           "resources/bsdr_separator.bmp"
+IDB_BSDR_BTN_NORMAL BITMAP          "resources/bsdrbtn_normal.bmp"
+IDB_BSDR_BTN_HOVER BITMAP           "resources/bsdrbtn_hover.bmp"
+IDB_BSDR_BTN_PRESSED BITMAP         "resources/bsdrbtn_pressed.bmp"
+IDB_BSDR_BTN_SELECTED BITMAP        "resources/bsdrbtn_selected.bmp"
+IDB_BSDR_BTN_SELECTED_HOVER BITMAP  "resources/bsdrbtn_selected_hover.bmp"
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+  IDS_BSDR_DESC_LOGOFF,             "To close the program that is preventing Windows from\nlogging off, click Cancel, and then close the program."
+  IDS_BSDR_BTN_LOGOFF,              "&Force log off"
+  IDS_BSDR_DESC_RESTART,            "To close the program that is preventing Windows from\nrestarting, click Cancel, and then close the program."
+  IDS_BSDR_BTN_RESTART,             "&Force restart"
+  IDS_BSDR_BLOCKINGAPP_SHUTDOWN,    "This program is preventing Windows from shutting down."
+  IDS_BSDR_BLOCKINGAPP_LOGOFF,      "This program is preventing Windows from logging off."
+  IDS_BSDR_BLOCKINGAPP_RESTART,     "This program is preventing Windows from restarting."
+  IDS_BSDR_WAITINGFOR, 	            "(Waiting for)"
+  IDS_BSDR_BLOCKING_BGAPPS,         "Waiting for background programs to close."
+  IDS_BSDR_WARNING_LOGOFF,          "If you force log off you may lose work that you haven't saved.\nDo you still want to force log off?"
+  IDS_BSDR_WARNING_RESTART,         "If you force restart you may lose work that you haven't saved.\nDo you still want to force restart?"
+  IDS_BSDR_BLOCKINGAPPCOUNT_MULTI, 	"%d programs still need to close:"
+  IDS_BSDR_BLOCKINGAPPCOUNT_SINGLE, "1 program still needs to close:"
+}
+
 #include <ntverp.h>
 #undef VER_COMPANYNAME_STR
 #undef VER_PRODUCTNAME_STR

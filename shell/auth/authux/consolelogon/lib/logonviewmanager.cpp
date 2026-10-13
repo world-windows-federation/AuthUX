@@ -1083,7 +1083,7 @@ HRESULT LogonViewManager::ShowCredentialView()
 HRESULT LogonViewManager::ShowStatusView(HSTRING status)
 {
 	CLogonFrame::GetSingleton()->ShowStatusMessage(WindowsGetStringRawBuffer(status, nullptr));
-
+	
 	m_currentViewType = LogonView::Status;
 	return S_OK;
 }

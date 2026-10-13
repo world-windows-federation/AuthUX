@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include "custombsdr.h"
 
 using namespace Microsoft::WRL;
 
@@ -11,8 +12,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 class ConsoleBSDRStub
 	: public RuntimeClass<RuntimeClassFlags<WinRtClassicComMix>
-		, IBlockedShutdownResolverUX
-		, FtmBase
+	, IBlockedShutdownResolverUX
+	, FtmBase
 	>
 {
 	InspectableClass(RuntimeClass_Windows_Internal_UI_Logon_Controller_ConsoleBlockedShutdownResolver, FullTrust);
@@ -33,8 +34,14 @@ public:
 	STDMETHODIMP Stop() override;
 	//~ End IBlockedShutdownResolverUX Interface
 private:
-	EventSource<ITypedEventHandler<IBlockedShutdownResolverUX*, BlockedShutdownResolution>> _Resolved;
+	static EventSource<ITypedEventHandler<IBlockedShutdownResolverUX*, BlockedShutdownResolution>> _Resolved;
+	static BOOLEAN _wasClicked;
+
+	static void Resolve(BlockedShutdownResolution resolution);
 };
+
+BOOLEAN ConsoleBSDRStub::_wasClicked = false;
+EventSource<ITypedEventHandler<IBlockedShutdownResolverUX*, BlockedShutdownResolution>> ConsoleBSDRStub::_Resolved = {};
 
 ConsoleBSDRStub::ConsoleBSDRStub()
 {
@@ -46,6 +53,9 @@ ConsoleBSDRStub::~ConsoleBSDRStub()
 
 HRESULT ConsoleBSDRStub::Start(IUserSettingManager* settingsManager, ILogonUIStateInfo* stateInfo)
 {
+	LogonUIState logonUIState = LogonUIState_Start;
+	stateInfo->get_CurrentLogonUIState(&logonUIState);
+	CustomBSDR::Start(&ConsoleBSDRStub::Resolve, logonUIState);
 	return S_OK;
 }
 
@@ -57,18 +67,20 @@ HRESULT ConsoleBSDRStub::get_ScaleFactor(UINT* value)
 
 HRESULT ConsoleBSDRStub::get_WasClicked(BOOLEAN* value)
 {
-	*value = false;
+	*value = _wasClicked;
 	return S_OK;
 }
 
 HRESULT ConsoleBSDRStub::AddApplication(IShutdownBlockingApp* blockingApp)
 {
-	return _Resolved.InvokeAll(this, BlockedShutdownResolution_Force);
+	CustomBSDR::AddApplication(blockingApp);
+	return S_OK;
 }
 
 HRESULT ConsoleBSDRStub::RemoveApplication(UINT appid)
 {
-	return _Resolved.InvokeAll(this, BlockedShutdownResolution_Force);
+	CustomBSDR::RemoveApplication(appid);
+	return S_OK;
 }
 
 HRESULT ConsoleBSDRStub::add_Resolved(
@@ -86,12 +98,20 @@ HRESULT ConsoleBSDRStub::remove_Resolved(EventRegistrationToken token)
 
 HRESULT ConsoleBSDRStub::Hide()
 {
+	CustomBSDR::Hide();
 	return S_OK;
 }
 
 HRESULT ConsoleBSDRStub::Stop()
 {
+	CustomBSDR::Stop();
 	return S_OK;
+}
+
+void ConsoleBSDRStub::Resolve(BlockedShutdownResolution resolution)
+{
+	_wasClicked = true;
+	(void)_Resolved.InvokeAll(nullptr, resolution);
 }
 
 ActivatableClass(ConsoleBSDRStub);

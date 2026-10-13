@@ -115,6 +115,11 @@ Section "AuthUX" AuthUX
     AccessControl::GrantOnRegKey HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.LockScreenHost" $0 FullAccess
     WriteRegExpandStr HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.LockScreenHost" \
         "DllPath" "$INSTDIR\AuthUX.dll" 
+
+	AccessControl::SetRegKeyOwner HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" $0
+	AccessControl::GrantOnRegKey HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" $0 FullAccess
+	WriteRegExpandStr HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" \
+		"DllPath" "$INSTDIR\AuthUX.dll"
 SectionEnd
 
 Section "Uninstall"
@@ -133,6 +138,11 @@ Section "Uninstall"
     AccessControl::GrantOnRegKey HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.LockScreenHost" $0 FullAccess
     WriteRegExpandStr HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.LockScreenHost" \
         "DllPath" "%SystemRoot%\system32\logoncontroller.dll"
+
+    AccessControl::SetRegKeyOwner HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" $0
+    AccessControl::GrantOnRegKey HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" $0 FullAccess
+    WriteRegExpandStr HKLM "SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.UI.Logon.Controller.BlockedShutdownResolverUX" \
+        "DllPath" "%SystemRoot%\system32\Windows.UI.BlockedShutdown.dll"
 
     # Delete uninstall entry
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\AuthUX"

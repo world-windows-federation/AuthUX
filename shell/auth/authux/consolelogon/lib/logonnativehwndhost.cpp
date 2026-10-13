@@ -64,6 +64,9 @@ HRESULT CLogonNativeHWNDHost::OnMessage(UINT uMsg, WPARAM wParam, LPARAM lParam,
 
 	switch (uMsg)
 	{
+	case WM_DISPLAYCHANGE:
+		SetWindowPos(GetHWND(), nullptr, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_NOZORDER | SWP_NOACTIVATE);
+		break;
 	case WM_CLOSE:
 		{
 			return FALSE;

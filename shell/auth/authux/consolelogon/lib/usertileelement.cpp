@@ -585,22 +585,6 @@ HRESULT CDUIUserTileElement::_CreateCommandLinkField(int index, DirectUI::Elemen
 	return S_OK;
 }
 
-HRESULT GetBitmapFromRandomStream(Microsoft::WRL::ComPtr<ABI::Windows::Storage::Streams::IRandomAccessStream> stream, HBITMAP* outBitmap)
-{
-	Microsoft::WRL::ComPtr<IStream> spStream;
-	RETURN_IF_FAILED(CreateStreamOverRandomAccessStream(stream.Get(),IID_PPV_ARGS(&spStream)));
-
-	Microsoft::WRL::ComPtr<IWICImagingFactory> spWICFactory;
-	RETURN_IF_FAILED(CoCreateInstance(CLSID_WICImagingFactory2, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&spWICFactory)));
-
-	Microsoft::WRL::ComPtr<IWICBitmapSource> spWICBitmapSource;
-	RETURN_IF_FAILED(LoadImageWithWIC(spWICFactory.Get(),spStream.Get(),LIWW_NONE,&spWICBitmapSource,nullptr,nullptr));
-
-	//HBITMAP hbmpImage;
-	RETURN_IF_FAILED(ConvertWICBitmapToHBITMAP(spWICFactory.Get(), spWICBitmapSource.Get(), outBitmap));
-	return S_OK;
-}
-
 HRESULT GetBitmapFromUserSID(CoTaskMemNativeString& SID, HBITMAP* outBitmap)
 {
 	Microsoft::WRL::ComPtr<IUserTileStore> tileStore;

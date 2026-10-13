@@ -93,6 +93,9 @@
     <ClCompile Include="shell\auth\authux\consolelogon\lib\authux.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="shell\auth\authux\consolelogon\lib\custombsdr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shell\auth\authux\consolelogon\dll\pch.h">
@@ -213,6 +216,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sdk\inc\WaitForCompletion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shell\auth\authux\consolelogon\lib\custombsdr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -43,3 +43,6 @@ HRESULT Convert32bppWICBitmapSourceToHBITMAP(IWICBitmapSource* pWICBitmapSource,
 
 HRESULT ConvertWICBitmapToHBITMAP(
 	IWICImagingFactory* pWICImagingFactory, IWICBitmapSource* pWICBitmapSource, HBITMAP* phbmImage);
+
+HRESULT GetBitmapFromRandomStream(
+	Microsoft::WRL::ComPtr<ABI::Windows::Storage::Streams::IRandomAccessStream> stream, HBITMAP* outBitmap);

@@ -1,60 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug.RS5|Win32"><Configuration>Debug.RS5</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.RS5|x64"><Configuration>Debug.RS5</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.RS5|ARM64"><Configuration>Debug.RS5</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.19H1|Win32"><Configuration>Debug.19H1</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.19H1|x64"><Configuration>Debug.19H1</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.19H1|ARM64"><Configuration>Debug.19H1</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.VB|Win32"><Configuration>Debug.VB</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.VB|x64"><Configuration>Debug.VB</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.VB|ARM64"><Configuration>Debug.VB</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.MN|Win32"><Configuration>Debug.MN</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.MN|x64"><Configuration>Debug.MN</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.MN|ARM64"><Configuration>Debug.MN</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.FE|Win32"><Configuration>Debug.FE</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.FE|x64"><Configuration>Debug.FE</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.FE|ARM64"><Configuration>Debug.FE</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.CO|Win32"><Configuration>Debug.CO</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.CO|x64"><Configuration>Debug.CO</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.CO|ARM64"><Configuration>Debug.CO</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.NI|Win32"><Configuration>Debug.NI</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.NI|x64"><Configuration>Debug.NI</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.NI|ARM64"><Configuration>Debug.NI</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.ZN|Win32"><Configuration>Debug.ZN</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.ZN|x64"><Configuration>Debug.ZN</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.ZN|ARM64"><Configuration>Debug.ZN</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.GE|Win32"><Configuration>Debug.GE</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.GE|x64"><Configuration>Debug.GE</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Debug.GE|ARM64"><Configuration>Debug.GE</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.RS5|Win32"><Configuration>Release.RS5</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.RS5|x64"><Configuration>Release.RS5</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.RS5|ARM64"><Configuration>Release.RS5</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.19H1|Win32"><Configuration>Release.19H1</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.19H1|x64"><Configuration>Release.19H1</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.19H1|ARM64"><Configuration>Release.19H1</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.VB|Win32"><Configuration>Release.VB</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.VB|x64"><Configuration>Release.VB</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.VB|ARM64"><Configuration>Release.VB</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.MN|Win32"><Configuration>Release.MN</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.MN|x64"><Configuration>Release.MN</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.MN|ARM64"><Configuration>Release.MN</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.FE|Win32"><Configuration>Release.FE</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.FE|x64"><Configuration>Release.FE</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.FE|ARM64"><Configuration>Release.FE</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.CO|Win32"><Configuration>Release.CO</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.CO|x64"><Configuration>Release.CO</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.CO|ARM64"><Configuration>Release.CO</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.NI|Win32"><Configuration>Release.NI</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.NI|x64"><Configuration>Release.NI</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.NI|ARM64"><Configuration>Release.NI</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.ZN|Win32"><Configuration>Release.ZN</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.ZN|x64"><Configuration>Release.ZN</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.ZN|ARM64"><Configuration>Release.ZN</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.GE|Win32"><Configuration>Release.GE</Configuration><Platform>Win32</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.GE|x64"><Configuration>Release.GE</Configuration><Platform>x64</Platform></ProjectConfiguration>
-    <ProjectConfiguration Include="Release.GE|ARM64"><Configuration>Release.GE</Configuration><Platform>ARM64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.RS5|Win32">
+      <Configuration>Debug.RS5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.RS5|x64">
+      <Configuration>Debug.RS5</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.RS5|ARM64">
+      <Configuration>Debug.RS5</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.19H1|Win32">
+      <Configuration>Debug.19H1</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.19H1|x64">
+      <Configuration>Debug.19H1</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.19H1|ARM64">
+      <Configuration>Debug.19H1</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.VB|Win32">
+      <Configuration>Debug.VB</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.VB|x64">
+      <Configuration>Debug.VB</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.VB|ARM64">
+      <Configuration>Debug.VB</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.MN|Win32">
+      <Configuration>Debug.MN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.MN|x64">
+      <Configuration>Debug.MN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.MN|ARM64">
+      <Configuration>Debug.MN</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.FE|Win32">
+      <Configuration>Debug.FE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.FE|x64">
+      <Configuration>Debug.FE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.FE|ARM64">
+      <Configuration>Debug.FE</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.CO|Win32">
+      <Configuration>Debug.CO</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.CO|x64">
+      <Configuration>Debug.CO</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.CO|ARM64">
+      <Configuration>Debug.CO</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.NI|Win32">
+      <Configuration>Debug.NI</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.NI|x64">
+      <Configuration>Debug.NI</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.NI|ARM64">
+      <Configuration>Debug.NI</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.ZN|Win32">
+      <Configuration>Debug.ZN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.ZN|x64">
+      <Configuration>Debug.ZN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.ZN|ARM64">
+      <Configuration>Debug.ZN</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.GE|Win32">
+      <Configuration>Debug.GE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.GE|x64">
+      <Configuration>Debug.GE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug.GE|ARM64">
+      <Configuration>Debug.GE</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.RS5|Win32">
+      <Configuration>Release.RS5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.RS5|x64">
+      <Configuration>Release.RS5</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.RS5|ARM64">
+      <Configuration>Release.RS5</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.19H1|Win32">
+      <Configuration>Release.19H1</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.19H1|x64">
+      <Configuration>Release.19H1</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.19H1|ARM64">
+      <Configuration>Release.19H1</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.VB|Win32">
+      <Configuration>Release.VB</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.VB|x64">
+      <Configuration>Release.VB</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.VB|ARM64">
+      <Configuration>Release.VB</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.MN|Win32">
+      <Configuration>Release.MN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.MN|x64">
+      <Configuration>Release.MN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.MN|ARM64">
+      <Configuration>Release.MN</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.FE|Win32">
+      <Configuration>Release.FE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.FE|x64">
+      <Configuration>Release.FE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.FE|ARM64">
+      <Configuration>Release.FE</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.CO|Win32">
+      <Configuration>Release.CO</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.CO|x64">
+      <Configuration>Release.CO</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.CO|ARM64">
+      <Configuration>Release.CO</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.NI|Win32">
+      <Configuration>Release.NI</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.NI|x64">
+      <Configuration>Release.NI</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.NI|ARM64">
+      <Configuration>Release.NI</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.ZN|Win32">
+      <Configuration>Release.ZN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.ZN|x64">
+      <Configuration>Release.ZN</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.ZN|ARM64">
+      <Configuration>Release.ZN</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.GE|Win32">
+      <Configuration>Release.GE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.GE|x64">
+      <Configuration>Release.GE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release.GE|ARM64">
+      <Configuration>Release.GE</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -175,6 +337,7 @@
     <ClCompile Include="shell\auth\authux\consolelogon\lib\authuxlockaction.cpp" />
     <ClCompile Include="shell\auth\authux\consolelogon\lib\authux.cpp" />
     <ClCompile Include="shell\auth\authux\consolelogon\lib\consoleuimanager.cpp" />
+    <ClCompile Include="shell\auth\authux\consolelogon\lib\custombsdr.cpp" />
     <ClCompile Include="shell\auth\authux\consolelogon\lib\DefaultSelector.cpp" />
     <ClCompile Include="shell\auth\authux\consolelogon\lib\EventDispatcher.cpp" />
     <ClCompile Include="shell\auth\authux\consolelogon\lib\fieldcontainer.cpp" />
@@ -216,6 +379,7 @@
     <ClInclude Include="shell\auth\authux\consolelogon\lib\combobox.h" />
     <ClInclude Include="shell\auth\authux\consolelogon\lib\authuxlockaction.h" />
     <ClInclude Include="shell\auth\authux\consolelogon\lib\consoleuimanager.h" />
+    <ClInclude Include="shell\auth\authux\consolelogon\lib\custombsdr.h" />
     <ClInclude Include="shell\auth\authux\consolelogon\lib\DefaultSelector.h" />
     <ClInclude Include="shell\auth\authux\consolelogon\lib\duiutil.h" />
     <ClInclude Include="shell\auth\authux\consolelogon\lib\EventDispatcher.h" />
